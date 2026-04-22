@@ -1,0 +1,54 @@
+services:
+  - type: web
+    name: stockbroker-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: MONGO_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_EMAILS
+        sync: false
+
+  - type: web
+    name: stockbroker-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
+    pullRequestPreviewsEnabled: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: REACT_APP_API_URL
+        value: https://stockbroker-backend.onrender.com/api
+      - key: REACT_APP_DASHBOARD_URL
+        value: https://stockbroker-dashboard.onrender.com
+
+  - type: web
+    name: stockbroker-dashboard
+    runtime: static
+    rootDir: dashboard
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
+    pullRequestPreviewsEnabled: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: REACT_APP_API_URL
+        value: https://stockbroker-backend.onrender.com/api

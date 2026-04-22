@@ -1,0 +1,127 @@
+.auth-layout {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(circle at top right, rgba(25, 118, 210, 0.18), transparent 30%),
+    linear-gradient(135deg, #f7fbff 0%, #eef6ef 100%);
+}
+
+.auth-panel {
+  width: min(100%, 430px);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  box-shadow: 0 20px 80px rgba(15, 23, 42, 0.16);
+  padding: 2rem;
+}
+
+.auth-toggle-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 0.4rem;
+  background: #eaf2fb;
+  border-radius: 18px;
+}
+
+.auth-toggle-button {
+  border: none;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  color: #526072;
+}
+
+.auth-toggle-button.active {
+  background: #1565c0;
+  color: #fff;
+}
+
+.auth-panel h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.auth-panel p {
+  color: #526072;
+}
+
+.auth-panel form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.auth-panel label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.auth-panel input {
+  border: 1px solid #dbe4ee;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+}
+
+.auth-panel form button {
+  border: none;
+  border-radius: 14px;
+  padding: 0.95rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: #1565c0;
+  color: #fff;
+}
+
+.auth-panel form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-notice {
+  margin-top: 1rem;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+}
+
+.auth-notice.error {
+  background: #fff1f1;
+  color: #b42318;
+}
+
+.auth-notice.success {
+  background: #edfdf3;
+  color: #067647;
+}
+
+.auth-switch {
+  margin-top: 1.5rem;
+  color: #526072;
+}
+
+.auth-switch-button {
+  border: none;
+  background: transparent;
+  color: #1565c0;
+  font-weight: 700;
+  padding: 0;
+  cursor: pointer;
+}
+
+.admin-card {
+  padding: 1rem;
+  border: 1px solid #dbe4ee;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.admin-card ul {
+  margin: 1rem 0 0;
+  padding-left: 1rem;
+}

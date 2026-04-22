@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-link {
+  margin-left: 30px;
+}
+
+.navbar-brand img {
+  width: clamp(140px, 18vw, 190px) !important;
+}
+
+#supportHero {
+  background-color: #397dd0;
+  color: white;
+}
+
+#supportHero a {
+  color: white;
+}
+
+#supportWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#supportHero input {
+  padding: 15px 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.hero-cta,
+.open-account-cta,
+.universe-cta {
+  width: min(100%, 220px) !important;
+}
+
+.support-links a,
+.support-featured a,
+.support-ticket-link,
+.footer-market-links a {
+  overflow-wrap: anywhere;
+}
+
+.support-featured-list {
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 991.98px) {
+  .nav-link {
+    margin-left: 0;
+  }
+
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+
+  #supportWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #supportHero .row {
+    padding: 2rem 1rem !important;
+  }
+
+  #supportHero .col-md-6,
+  #supportHero .col-lg-4,
+  #supportHero .col-lg-5,
+  #supportHero .col-lg-6,
+  #supportHero .col-lg-7,
+  #supportHero .col-lg-8 {
+    padding: 1rem 0 !important;
+  }
+
+  .footer-market-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem;
+  }
+}
