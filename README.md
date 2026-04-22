@@ -1,1 +1,1 @@
-# CombinedLogistic
+# StockMarketClone
